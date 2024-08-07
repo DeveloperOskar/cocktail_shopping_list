@@ -66,22 +66,37 @@ function CockTailApp(element: HTMLElement) {
     _notify.bind(this)('Searching...', 'default');
 
     try {
+      // throw new Error('error getting drinks');
+
       const response = await fetch(`${BASE_URL}?s=${keyword}`);
+
+      if (response.status !== 200) {
+        throw new Error('error getting drinks');
+      }
+
       const data = (await response.json()) as GetDrinksResponse;
 
       setDrinks(data.drinks ?? []);
-    } catch (error) {}
+    } catch (error) {
+      _notify.bind(this)('error getting drinks', 'destructive');
+    }
   };
 
   const getInitialDrinks = async () => {
     try {
+      // throw new Error('error getting drinks');
       const response = await fetch(`${BASE_URL}?s=margarita`);
+
+      if (response.status !== 200) {
+        throw new Error('error getting drinks');
+      }
+
       const data = (await response.json()) as GetDrinksResponse;
 
       setDrinks(data.drinks ?? []);
     } catch (error) {
       console.error(error);
-      alert('error getting drinks');
+      _notify.bind(this)('error getting drinks', 'destructive');
     }
   };
 
