@@ -1,0 +1,21 @@
+{
+  "name": "cocktail-shopping-list",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A simple app for neovici",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"tsc --watch --preserveWatchOutput\" \"wds --watch\""
+  },
+  "dependencies": {
+    "haunted": "^5.0.0",
+    "lit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.31",
+    "@web/dev-server-legacy": "^2.1.1",
+    "concurrently": "^8.2.2",
+    "prettier": "^2.6.2",
+    "typescript": "~5.5.0"
+  }
+}
