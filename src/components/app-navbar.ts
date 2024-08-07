@@ -8,7 +8,7 @@ function AppNavbar() {
         <span>Cocktail Shopping List</span>
 
         <a
-          href="https://github.com/neovici/cocktail-shopping-list"
+          href="https://github.com/DeveloperOskar/cocktail_shopping_list"
           target="_blank"
         >
           <img
