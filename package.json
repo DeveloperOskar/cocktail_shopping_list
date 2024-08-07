@@ -5,7 +5,8 @@
   "description": "A simple app for neovici",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"tsc --watch --preserveWatchOutput\" \"wds --watch\""
+    "start": "npx tsc && wds",
+    "dev": "concurrently \"tsc --watch --preserveWatchOutput\" \"wds --watch\""
   },
   "dependencies": {
     "haunted": "^5.0.0",

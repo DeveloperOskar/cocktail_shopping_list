@@ -73,7 +73,7 @@ function AppNotifications(element: HTMLElement) {
   return html`
     <div>
       ${notifications.map(
-        (n, i) =>
+        (n) =>
           html`
             <aside id=${n.key} class=${'notification ' + n.type} role="alert">
               ${n.message}
